@@ -1,0 +1,57 @@
+# -------------------------------
+# Node.js / Next.js
+# -------------------------------
+**/node_modules/
+**/.next/
+**/out/
+shopping-app-frontend/.env.local
+shopping-app-frontend/.env.development.local
+shopping-app-frontend/.env.test.local
+shopping-app-frontend/.env.production.local
+shopping-app-frontend/.git-old
+
+# -------------------------------
+# .NET 8 / Categories Backend
+# -------------------------------
+CategoriesAPI/bin/
+CategoriesAPI/obj/
+CategoriesAPI/*.user
+CategoriesAPI/*.suo
+CategoriesAPI/*.sln.docstates
+CategoriesAPI/*.csproj.user
+
+# -------------------------------
+# Nest.js / Orders Backend
+# -------------------------------
+orders-api/dist/
+orders-api/coverage/
+orders-api/.env
+orders-api/.git-old
+
+# -------------------------------
+# General
+# -------------------------------
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Editor Directories and Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Docker
+docker-compose.override.yml
+
+# -------------------------------
+# MongoDB Data (Optional)
+# -------------------------------
+mongodb/data/db/

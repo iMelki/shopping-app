@@ -1,0 +1,358 @@
+{
+  "format": 1,
+  "restore": {
+    "S:\\source\\shopping-app\\CategoriesAPI\\tests\\CategoriesAPI.Tests\\CategoriesAPI.Tests.csproj": {}
+  },
+  "projects": {
+    "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Api\\CategoriesAPI.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Api\\CategoriesAPI.Api.csproj",
+        "projectName": "CategoriesAPI.Api",
+        "projectPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Api\\CategoriesAPI.Api.csproj",
+        "packagesPath": "C:\\Users\\Milky\\.nuget\\packages\\",
+        "outputPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Milky\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Application\\CategoriesAPI.Application.csproj": {
+                "projectPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Application\\CategoriesAPI.Application.csproj"
+              },
+              "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Infrastructure\\CategoriesAPI.Infrastructure.csproj": {
+                "projectPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Infrastructure\\CategoriesAPI.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Application\\CategoriesAPI.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Application\\CategoriesAPI.Application.csproj",
+        "projectName": "CategoriesAPI.Application",
+        "projectPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Application\\CategoriesAPI.Application.csproj",
+        "packagesPath": "C:\\Users\\Milky\\.nuget\\packages\\",
+        "outputPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Milky\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Domain\\CategoriesAPI.Domain.csproj": {
+                "projectPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Domain\\CategoriesAPI.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Domain\\CategoriesAPI.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Domain\\CategoriesAPI.Domain.csproj",
+        "projectName": "CategoriesAPI.Domain",
+        "projectPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Domain\\CategoriesAPI.Domain.csproj",
+        "packagesPath": "C:\\Users\\Milky\\.nuget\\packages\\",
+        "outputPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Milky\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Infrastructure\\CategoriesAPI.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Infrastructure\\CategoriesAPI.Infrastructure.csproj",
+        "projectName": "CategoriesAPI.Infrastructure",
+        "projectPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Infrastructure\\CategoriesAPI.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Milky\\.nuget\\packages\\",
+        "outputPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Milky\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Application\\CategoriesAPI.Application.csproj": {
+                "projectPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Application\\CategoriesAPI.Application.csproj"
+              },
+              "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Domain\\CategoriesAPI.Domain.csproj": {
+                "projectPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Domain\\CategoriesAPI.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "S:\\source\\shopping-app\\CategoriesAPI\\tests\\CategoriesAPI.Tests\\CategoriesAPI.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "S:\\source\\shopping-app\\CategoriesAPI\\tests\\CategoriesAPI.Tests\\CategoriesAPI.Tests.csproj",
+        "projectName": "CategoriesAPI.Tests",
+        "projectPath": "S:\\source\\shopping-app\\CategoriesAPI\\tests\\CategoriesAPI.Tests\\CategoriesAPI.Tests.csproj",
+        "packagesPath": "C:\\Users\\Milky\\.nuget\\packages\\",
+        "outputPath": "S:\\source\\shopping-app\\CategoriesAPI\\tests\\CategoriesAPI.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Milky\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Api\\CategoriesAPI.Api.csproj": {
+                "projectPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Api\\CategoriesAPI.Api.csproj"
+              },
+              "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Application\\CategoriesAPI.Application.csproj": {
+                "projectPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Application\\CategoriesAPI.Application.csproj"
+              },
+              "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Domain\\CategoriesAPI.Domain.csproj": {
+                "projectPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Domain\\CategoriesAPI.Domain.csproj"
+              },
+              "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Infrastructure\\CategoriesAPI.Infrastructure.csproj": {
+                "projectPath": "S:\\source\\shopping-app\\CategoriesAPI\\src\\CategoriesAPI.Infrastructure\\CategoriesAPI.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.5.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

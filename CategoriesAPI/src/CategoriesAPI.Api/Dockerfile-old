@@ -1,0 +1,25 @@
+# Use the official .NET 8 SDK image for building
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /app
+
+# Copy solution and projects
+COPY *.sln .
+COPY src/CategoriesAPI.Domain/CategoriesAPI.Domain.csproj src/CategoriesAPI.Domain/
+COPY src/CategoriesAPI.Application/CategoriesAPI.Application.csproj src/CategoriesAPI.Application/
+COPY src/CategoriesAPI.Infrastructure/CategoriesAPI.Infrastructure.csproj src/CategoriesAPI.Infrastructure/
+COPY src/CategoriesAPI.Api/CategoriesAPI.Api.csproj src/CategoriesAPI.Api/
+
+# Restore dependencies
+RUN dotnet restore
+
+# Copy all source files
+COPY src/ ./src/
+
+# Build and publish
+RUN dotnet publish src/CategoriesAPI.Api/CategoriesAPI.Api.csproj -c Release -o out
+
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+COPY --from=build /app/out ./
+ENTRYPOINT ["dotnet", "CategoriesAPI.Api.dll"]
