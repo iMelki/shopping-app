@@ -8,7 +8,6 @@ A comprehensive shopping application built with **Next.js**, **React**, **Redux 
   - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)
   - [Technologies Used](#technologies-used)
-  - [Project Structure](#project-structure)
   - [Prerequisites](#prerequisites)
   - [Setup Instructions](#setup-instructions)
     - [1. Clone the Repository](#1-clone-the-repository)
@@ -32,6 +31,7 @@ A comprehensive shopping application built with **Next.js**, **React**, **Redux 
 The **Shopping App** is designed to provide a seamless shopping experience where users can:
 
 1. **Shopping Cart Page:**
+
    - Select product categories (e.g., Dairy, Meat, Fruits & Vegetables).
    - Enter product names manually.
    - View selected products categorized accordingly.
@@ -51,6 +51,7 @@ The application comprises three main projects managed under a single Git reposit
 ## Technologies Used
 
 - **Frontend:**
+
   - [Next.js](https://nextjs.org/)
   - [React](https://reactjs.org/)
   - [Redux Toolkit](https://redux-toolkit.js.org/)
@@ -59,169 +60,22 @@ The application comprises three main projects managed under a single Git reposit
   - [Ant Design](https://ant.design/)
 
 - **Backends:**
+
   - **Categories Backend:**
+
     - [.NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
     - [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/)
     - [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-  
+
   - **Orders Backend:**
     - [Nest.js](https://nestjs.com/)
     - [MongoDB](https://www.mongodb.com/)
-    - [Elastic Search](https://www.elastic.co/elasticsearch/) *(Planned)*
+    - [Elastic Search](https://www.elastic.co/elasticsearch/) _(Planned)_
 
 - **DevOps & Deployment:**
   - [Docker](https://www.docker.com/)
   - [Docker Compose](https://docs.docker.com/compose/)
   - [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/)
-
-## Project Structure
-
-shopping-app/
-│   .gitignore
-│   docker-compose.yml
-│   package.json
-│   README.md
-│
-├───CategoriesAPI
-│   │   CategoriesAPI.sln
-│   │   Dockerfile
-│   │
-│   ├───src
-│   │   ├───CategoriesAPI.Api
-│   │   │       CategoriesAPI.Api.csproj
-│   │   │       Program.cs
-│   │   │
-│   │   ├───CategoriesAPI.Application
-│   │   │   │   CategoriesAPI.Application.csproj
-│   │   │   │
-│   │   │   ├───Interfaces
-│   │   │   │       ICategoryRepository.cs
-│   │   │   │
-│   │   │   └───Services
-│   │   │           CategoryService.cs
-│   │   │
-│   │   ├───CategoriesAPI.Domain
-│   │   │   │   CategoriesAPI.Domain.csproj
-│   │   │   │
-│   │   │   ├───Entities
-│   │   │   │       Category.cs
-│   │   │   │
-│   │   │   └───Exceptions
-│   │   │           NotFoundException.cs
-│   │   │
-│   │   └───CategoriesAPI.Infrastructure
-│   │       │   CategoriesAPI.Infrastructure.csproj
-│   │       │
-│   │       ├───Data
-│   │       │       ApplicationDbContext.cs
-│   │       │       DbSeeder.cs
-│   │       │
-│   │       └───Repositories
-│   │               CategoryRepository.cs
-│   │
-│   └───tests
-│       └───CategoriesAPI.Tests
-│           │   CategoriesAPI.Tests.csproj
-│           │
-│           ├───Application
-│           │       CategoryServiceTests.cs
-│           │
-│           ├───Domain
-│           │       DbSeederTests.cs
-│           │
-│           └───Infrastructure
-│                   CategoryRepositoryTests.cs
-│
-├───orders-api
-│   │   Dockerfile
-│   │   package.json
-│   │   README.md
-│   │   tsconfig.json
-│   │
-│   ├───src
-│   │   │   app.controller.spec.ts
-│   │   │   app.controller.ts
-│   │   │   app.module.ts
-│   │   │   app.service.ts
-│   │   │   main.ts
-│   │   │   orders-api.module.ts
-│   │   │
-│   │   ├───application
-│   │   │   ├───dto
-│   │   │   │       create-order.dto.ts
-│   │   │   │       update-order.dto.ts
-│   │   │   │
-│   │   │   ├───interfaces
-│   │   │   │       order.repository.interface.ts
-│   │   │   │
-│   │   │   └───services
-│   │   │           order.service.ts
-│   │   │
-│   │   ├───controllers
-│   │   │       orders.controller.ts
-│   │   │
-│   │   ├───domain
-│   │   │   ├───entities
-│   │   │   │       order.entity.ts
-│   │   │   │
-│   │   │   └───exceptions
-│   │   │           order-not-found.exception.ts
-│   │   │
-│   │   └───infrastructure
-│   │       │   orders-api.infrastructure.module.ts
-│   │       │
-│   │       ├───repositories
-│   │       │       order.repository.ts
-│   │       │
-│   │       └───schemas
-│   │               order.schema.ts
-│   │
-│   └───test
-│       │   app.e2e-spec.ts
-│       │   jest-e2e.json
-│       │
-│       ├───application
-│       │       order.service.spec.ts
-│       │
-│       └───controllers
-│               orders.controller.spec.ts
-│
-└───shopping-app-frontend
-    │   Dockerfile
-    │   next.config.mjs
-    │   package.json
-    │   README.md
-    │   tsconfig.json
-    │
-    ├───pages
-    │       index.tsx
-    │       order.tsx
-    │       _app.tsx
-    │
-    ├───src
-    │   ├───app
-    │   │       globals.css
-    │   │       layout.tsx
-    │   ├───components
-    │   │       OrderForm.tsx
-    │   │       ProductList.tsx
-    │   │
-    │   ├───store
-    │   │       categoriesSlice.ts
-    │   │       formSlice.ts
-    │   │       index.ts
-    │   │       productSlice.ts
-    │   │       productsSlice.ts
-    │   │
-    │   ├───styles
-    │   │       globals.css
-    │   │
-    │   └───types
-    │           index.ts
-    │
-    └───__tests__
-            index.test.tsx
-
 
 ## Prerequisites
 
@@ -232,7 +86,7 @@ Before setting up the project, ensure you have the following installed on your m
 - [Docker Compose](https://docs.docker.com/compose/)
 - [Node.js (v16 or later)](https://nodejs.org/)
 - [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
-- [MongoDB](https://www.mongodb.com/try/download/community) *(Optional if not using Docker for MongoDB)*
+- [MongoDB](https://www.mongodb.com/try/download/community) _(Optional if not using Docker for MongoDB)_
 
 ## Setup Instructions
 
@@ -244,6 +98,7 @@ cd shopping-app
 ```
 
 ### 2. Configure Environment Variables
+
 Create .env files for each project as needed.
 
 #### Frontend (shopping-app-frontend/.env.local)
@@ -263,8 +118,8 @@ MONGODB_URI=mongodb://mongodb:27017/ordersdb
 
 Ensure the connection string is set in the docker-compose.yml under the categories-api service.
 
-
 ### 3. Docker Compose
+
 Ensure Docker and Docker Compose are installed and running.
 
 ## Running the Application
@@ -276,21 +131,20 @@ Ensure Docker and Docker Compose are installed and running.
    ```bash
    cd shopping-app-frontend
    ```
-   
+
 2. **Install Dependencies:**
 
    ```bash
    npm install
    ```
-   
+
 3. **Run the Development Server:**
 
    ```bash
    npm run dev
    ```
-   
-The frontend will be accessible at http://localhost:3000.
 
+The frontend will be accessible at <http://localhost:3000>.
 
 ### Categories Backend (.NET 8)
 
@@ -299,45 +153,43 @@ The frontend will be accessible at http://localhost:3000.
    ```bash
    cd categories-api
    ```
-   
+
 2. **Restore Dependencies and Run Migrations:**
 
    ```bash
    dotnet restore
    dotnet ef database update
    ```
-   
+
 3. **Run the Application:**
 
    ```bash
    dotnet run
    ```
-   
-The Categories Backend API will be accessible at http://localhost:5000.
 
+The Categories Backend API will be accessible at <http://localhost:5000>.
 
 ### Orders Backend (Nest.js)
 
-1. **Navigate to Orders  Backend Directory:**
+1. **Navigate to Orders Backend Directory:**
 
    ```bash
    cd orders-api
    ```
-   
+
 2. **Install Dependencies:**
 
    ```bash
    npm install
    ```
-   
+
 3. **Run the Application:**
 
    ```bash
    npm run start:dev
    ```
-   
-The Orders Backend API will be accessible at http://localhost:5001.
 
+The Orders Backend API will be accessible at <http://localhost:5001>.
 
 ## API Documentation
 
@@ -346,17 +198,17 @@ The Orders Backend API will be accessible at http://localhost:5001.
 - **Base URL:** `http://localhost:5000`
 - **Endpoints:**
   - `GET /categories`  
-    *Fetches the list of product categories.*
+    _Fetches the list of product categories._
 
 ### Orders API
 
 - **Base URL:** `http://localhost:5001`
 - **Endpoints:**
-  - `POST /orders`  
-    *Submits order details.*
-  - `GET /orders` *(Optional)*  
-    *Fetches all orders.*
-	
+  - `POST /orders`
+    _Submits order details._
+  - `GET /orders` _(Optional)_
+    _Fetches all orders._
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
@@ -369,4 +221,4 @@ For any inquiries or support, please contact:
 
 ---
 
-*Happy Coding!*
+_Happy Coding!_
