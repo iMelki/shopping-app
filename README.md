@@ -4,26 +4,28 @@ A comprehensive shopping application built with **Next.js**, **React**, **Redux 
 
 ## Table of Contents
 
-- [Project Overview](#project-overview)
-- [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
-- [Prerequisites](#prerequisites)
-- [Setup Instructions](#setup-instructions)
-  - [1. Clone the Repository](#1-clone-the-repository)
-  - [2. Configure Environment Variables](#2-configure-environment-variables)
-  - [3. Docker Compose](#3-docker-compose)
-- [Running the Application](#running-the-application)
-  - [Frontend](#frontend)
-  - [Categories Backend (.NET 8)](#categories-backend-net-8)
-  - [Orders Backend (Nest.js)](#orders-backend-nestjs)
-- [API Documentation](#api-documentation)
-  - [Categories API](#categories-api)
-  - [Orders API](#orders-api)
-- [Deployment](#deployment)
-  - [Azure CI/CD & DevOps](#azure-cicd--devops)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [Shopping App](#shopping-app)
+  - [Table of Contents](#table-of-contents)
+  - [Project Overview](#project-overview)
+  - [Technologies Used](#technologies-used)
+  - [Project Structure](#project-structure)
+  - [Prerequisites](#prerequisites)
+  - [Setup Instructions](#setup-instructions)
+    - [1. Clone the Repository](#1-clone-the-repository)
+    - [2. Configure Environment Variables](#2-configure-environment-variables)
+      - [Frontend (shopping-app-frontend/.env.local)](#frontend-shopping-app-frontendenvlocal)
+      - [Orders Backend (orders-backend/.env)](#orders-backend-orders-backendenv)
+      - [Categories Backend](#categories-backend)
+    - [3. Docker Compose](#3-docker-compose)
+  - [Running the Application](#running-the-application)
+    - [Frontend](#frontend)
+    - [Categories Backend (.NET 8)](#categories-backend-net-8)
+    - [Orders Backend (Nest.js)](#orders-backend-nestjs)
+  - [API Documentation](#api-documentation)
+    - [Categories API](#categories-api)
+    - [Orders API](#orders-api)
+  - [License](#license)
+  - [Contact](#contact)
 
 ## Project Overview
 
@@ -86,9 +88,9 @@ shopping-app/
 │   │
 │   ├───src
 │   │   ├───CategoriesAPI.Api
-│   │   │   │   CategoriesAPI.Api.csproj
-│   │   │   │   Program.cs
-│   │   │   │   
+│   │   │       CategoriesAPI.Api.csproj
+│   │   │       Program.cs
+│   │   │
 │   │   ├───CategoriesAPI.Application
 │   │   │   │   CategoriesAPI.Application.csproj
 │   │   │   │
