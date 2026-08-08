@@ -13,8 +13,8 @@ shopping-app-frontend/.git-old
 # -------------------------------
 # .NET 8 / Categories Backend
 # -------------------------------
-CategoriesAPI/bin/
-CategoriesAPI/obj/
+CategoriesAPI/**/bin/
+CategoriesAPI/**/obj/
 CategoriesAPI/*.user
 CategoriesAPI/*.suo
 CategoriesAPI/*.sln.docstates
@@ -50,6 +50,7 @@ Thumbs.db
 
 # Docker
 docker-compose.override.yml
+/.env
 
 # -------------------------------
 # MongoDB Data (Optional)

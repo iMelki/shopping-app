@@ -12,8 +12,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 // Configure DbContext with SQL Server
+var defaultConnection = builder.Configuration.GetConnectionString("DefaultConnection");
+if (string.IsNullOrWhiteSpace(defaultConnection))
+{
+    throw new InvalidOperationException(
+        "ConnectionStrings:DefaultConnection must be configured through the runtime environment.");
+}
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(defaultConnection));
 
 // Register repositories
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();

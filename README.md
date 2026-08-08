@@ -99,7 +99,16 @@ cd shopping-app
 
 ### 2. Configure Environment Variables
 
-Create .env files for each project as needed.
+Copy the tracked example into a local, ignored environment file before using
+Docker Compose:
+
+```bash
+cp .env.example .env
+```
+
+Replace the example SQL Server password in `.env` with a strong local-only
+value. Docker Compose fails before startup when `SQLSERVER_SA_PASSWORD` is not
+set.
 
 #### Frontend (shopping-app-frontend/.env.local)
 
@@ -116,7 +125,10 @@ MONGODB_URI=mongodb://mongodb:27017/ordersdb
 
 #### Categories Backend
 
-Ensure the connection string is set in the docker-compose.yml under the categories-api service.
+Docker Compose builds the Categories API connection string from
+`SQLSERVER_SA_PASSWORD`. For a direct `dotnet run`, provide
+`ConnectionStrings__DefaultConnection` through the shell environment or .NET
+user secrets; the API intentionally fails at startup when it is missing.
 
 ### 3. Docker Compose
 

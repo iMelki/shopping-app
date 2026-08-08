@@ -21,8 +21,8 @@ services:
     ports:
       - "5000:80"
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=CategoriesDb;User=sa;Password=password123;
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: "Server=sqlserver;Database=CategoriesDb;User=sa;Password=${SQLSERVER_SA_PASSWORD:?SQLSERVER_SA_PASSWORD must be set};TrustServerCertificate=True;"
     depends_on:
       - sqlserver
     networks:
@@ -42,7 +42,7 @@ services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
     environment:
-      SA_PASSWORD: "password123"
+      SA_PASSWORD: "${SQLSERVER_SA_PASSWORD:?SQLSERVER_SA_PASSWORD must be set}"
       ACCEPT_EULA: "Y"
     ports:
       - "1433:1433"
