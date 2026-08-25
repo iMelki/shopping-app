@@ -1,7 +1,7 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
-import { clearProducts } from "@/store/productsSlice";
+import { clearProducts, Product } from "@/store/productsSlice";
 import { RootState, AppDispatch } from "@/store";
 import { useRouter } from "next/router";
 
@@ -9,7 +9,7 @@ interface OrderDetails {
 	fullName: string;
 	address: string;
 	email: string;
-	products: Record<string, string[]>;
+	products: Product[];
 }
 
 const OrderPage: React.FC = () => {
