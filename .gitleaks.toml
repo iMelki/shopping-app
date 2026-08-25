@@ -1,0 +1,4 @@
+title = "shopping-app"
+
+[extend]
+useDefault = true

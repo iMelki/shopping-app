@@ -1,0 +1,23 @@
+[
+ {
+  "RuleID": "generic-api-key",
+  "Description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+  "StartLine": 5,
+  "EndLine": 5,
+  "StartColumn": 84,
+  "EndColumn": 101,
+  "Match": "token=abc123def456",
+  "Secret": "abc123def456",
+  "File": "orders-api/README.md",
+  "SymlinkFile": "",
+  "Commit": "60bae1a51b084ae9b5427e596871319fef8eda62",
+  "Link": "https://github.com/iMelki/shopping-app/blob/60bae1a51b084ae9b5427e596871319fef8eda62/orders-api/README.md?plain=1#L5",
+  "Entropy": 3.5849626,
+  "Author": "iMelki",
+  "Email": "iMelki@users.noreply.github.com",
+  "Date": "2024-10-08T09:59:51Z",
+  "Message": "Initial commit with all projects and unified state",
+  "Tags": [],
+  "Fingerprint": "60bae1a51b084ae9b5427e596871319fef8eda62:orders-api/README.md:generic-api-key:5"
+ }
+]
