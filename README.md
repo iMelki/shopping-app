@@ -233,4 +233,15 @@ For any inquiries or support, please contact:
 
 ---
 
+## Verify
+
+```bash
+pip install pre-commit
+pre-commit install
+pre-commit run --all-files
+cd shopping-app-frontend && npm ci && npm test -- --watchAll=false
+```
+
+See `BRANCH_POLICY.md`.
+
 _Happy Coding!_
