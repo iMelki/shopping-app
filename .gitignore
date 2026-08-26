@@ -56,3 +56,6 @@ docker-compose.override.yml
 # MongoDB Data (Optional)
 # -------------------------------
 mongodb/data/db/
+
+# Local MemPalace routing (do not commit)
+mempalace.yaml
