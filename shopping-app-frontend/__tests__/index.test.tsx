@@ -1,7 +1,11 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { act, render, screen, fireEvent } from "@testing-library/react";
 import ShoppingCart from "../pages/index";
 import { Provider } from "react-redux";
 import { store } from "@/store";
+
+jest.mock("next/router", () => ({
+	useRouter: () => ({ push: jest.fn() }),
+}));
 
 describe("ShoppingCart", () => {
 	it("renders Shopping Cart page", () => {
@@ -21,13 +25,15 @@ describe("ShoppingCart", () => {
 		);
 
 		// Mock categories
-		store.dispatch({
-			type: "categories/fetchCategories/fulfilled",
-			payload: [
-				{ id: 1, name: "Dairy" },
-				{ id: 2, name: "Meat" },
-				{ id: 3, name: "Fruits & Vegetables" },
-			],
+		act(() => {
+			store.dispatch({
+				type: "categories/fetchCategories/fulfilled",
+				payload: [
+					{ id: 1, name: "Dairy" },
+					{ id: 2, name: "Meat" },
+					{ id: 3, name: "Fruits & Vegetables" },
+				],
+			});
 		});
 
 		const categorySelect = screen.getByLabelText("Product Category:");
