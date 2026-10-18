@@ -1,7 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../store';
-import { addProduct } from '../store/productSlice';
+import { addProduct } from '../store/productsSlice';
+import { v4 as uuidv4 } from 'uuid';
 import { List, Input, Button, Select } from 'antd';
 import { useRouter } from 'next/navigation';
 
@@ -17,7 +18,13 @@ const ProductList: React.FC = () => {
   const handleAddProduct = () => {
     if (newProductName && selectedCategory) {
       dispatch(
-        addProduct({ name: newProductName, category: selectedCategory })
+        addProduct({
+          product: {
+            id: uuidv4(),
+            name: newProductName,
+            category: selectedCategory,
+          },
+        })
       );
       setNewProductName('');
       setSelectedCategory('');

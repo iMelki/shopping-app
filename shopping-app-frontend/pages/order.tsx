@@ -49,12 +49,15 @@ const OrderPage: React.FC = () => {
 		}
 	};
 
-	const productsList = Object.entries(selectedProducts).map(
-		([category, products]) => ({
-			category,
-			products,
-		})
-	);
+	const productsList = Object.entries(
+		selectedProducts.reduce<Record<string, Product[]>>((acc, product) => {
+			(acc[product.category] ||= []).push(product);
+			return acc;
+		}, {})
+	).map(([category, products]) => ({
+		category,
+		products,
+	}));
 
 	return (
 		<div style={{ padding: "20px" }}>
@@ -67,8 +70,8 @@ const OrderPage: React.FC = () => {
 					<div key={item.category}>
 						<h3>{item.category}</h3>
 						<ul>
-							{item.products.map((prod, idx) => (
-								<li key={idx}>{prod}</li>
+							{item.products.map((prod) => (
+								<li key={prod.id}>{prod.name}</li>
 							))}
 						</ul>
 					</div>
