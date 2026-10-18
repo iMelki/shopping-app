@@ -6,6 +6,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended', // Enables TypeScript-specific linting rules
     'prettier', // Ensure 'prettier' is last
   ],
+  ignorePatterns: ['out-demo/'],
   plugins: ['react', 'jsx-a11y', 'import'],
   rules: {
     // Customize your rules

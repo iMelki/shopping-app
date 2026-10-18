@@ -6,6 +6,7 @@ import { fetchCategories } from "@/store/categoriesSlice";
 import { addProduct, removeProduct, Product } from "@/store/productsSlice";
 import { useRouter } from "next/router";
 import { v4 as uuidv4 } from 'uuid'; // For generating unique IDs
+import { demo } from "@/demo/entry"; // Demo builds only (null otherwise)
 
 const ShoppingCart: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -55,6 +56,7 @@ const ShoppingCart: React.FC = () => {
   return (
     <div style={{ padding: "20px" }}>
       <h1>Shopping Cart</h1>
+      {demo && <demo.DemoCatalog />}
       <div style={{ marginBottom: "10px" }}>
         <label htmlFor="category">Product Category: </label>
         <select

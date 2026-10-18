@@ -1,0 +1,188 @@
+/* Demo-only styling. Loaded only by demo builds (see DemoShell). */
+.shell {
+  --demo-ink: #1f2328;
+  --demo-muted: #5b636d;
+  --demo-line: #dfe3e8;
+  --demo-surface: #ffffff;
+  --demo-page: #f5f6f8;
+  --demo-accent: #2f6f4f;
+  --demo-accent-ink: #ffffff;
+  min-height: 100vh;
+  background: var(--demo-page);
+  color: var(--demo-ink);
+}
+
+.banner {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff4d6;
+  border-bottom: 1px solid #ecd9a2;
+  color: #5a4610;
+  font-size: 14px;
+  text-align: center;
+  padding: 8px 16px;
+}
+
+.content {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 8px 16px 48px;
+}
+
+.content :global(h1) {
+  font-size: 28px;
+  margin: 16px 0 8px;
+}
+
+.content :global(h2) {
+  font-size: 20px;
+  margin: 24px 0 8px;
+}
+
+.content :global(h3) {
+  font-size: 15px;
+  margin: 12px 0 4px;
+  color: var(--demo-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.content :global(hr) {
+  border: 0;
+  border-top: 1px solid var(--demo-line);
+  margin: 24px 0;
+}
+
+.content :global(ul) {
+  padding-left: 20px;
+  margin: 4px 0;
+}
+
+.content :global(li) {
+  margin: 6px 0;
+}
+
+.content :global(input),
+.content :global(select),
+.content :global(textarea) {
+  font: inherit;
+  padding: 6px 10px;
+  border: 1px solid var(--demo-line);
+  border-radius: 6px;
+  background: var(--demo-surface);
+  margin: 4px 8px 4px 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.content :global(button) {
+  font: inherit;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--demo-accent);
+  background: var(--demo-accent);
+  color: var(--demo-accent-ink);
+  cursor: pointer;
+}
+
+.content :global(button:disabled) {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.content :global(form > div) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  margin-bottom: 8px;
+}
+
+.content :global(form label) {
+  min-width: 110px;
+}
+
+.content :global(textarea) {
+  min-width: 260px;
+}
+
+.catalogIntro {
+  color: var(--demo-muted);
+  margin: 0 0 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: var(--demo-surface);
+  border: 1px solid var(--demo-line);
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.art {
+  aspect-ratio: 5 / 4;
+}
+
+.cardName {
+  font-weight: 600;
+}
+
+.cardMeta {
+  color: var(--demo-muted);
+  font-size: 13px;
+}
+
+.cardRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.inCart {
+  font-size: 13px;
+  color: var(--demo-accent);
+}
+
+.note {
+  color: var(--demo-muted);
+  font-size: 14px;
+  margin: 8px 0 16px;
+}
+
+.placed {
+  max-width: 560px;
+  margin: 48px auto;
+  background: var(--demo-surface);
+  border: 1px solid var(--demo-line);
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.placed ul {
+  text-align: left;
+  display: inline-block;
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .content :global(textarea) {
+    min-width: 0;
+    width: 100%;
+  }
+}

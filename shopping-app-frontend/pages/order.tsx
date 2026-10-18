@@ -4,6 +4,9 @@ import axios from "axios";
 import { clearProducts, Product } from "@/store/productsSlice";
 import { RootState, AppDispatch } from "@/store";
 import { useRouter } from "next/router";
+// Demo builds only (null otherwise): checkout ends on an in-page confirmation.
+import { demo } from "@/demo/entry";
+import type { PlacedDemoOrder } from "@/demo/types";
 
 interface OrderDetails {
 	fullName: string;
@@ -24,6 +27,8 @@ const OrderPage: React.FC = () => {
 		email: "",
 		products: selectedProducts,
 	});
+	const [placedOrder, setPlacedOrder] =
+		useState<PlacedDemoOrder | null>(null);
 
 	const handleChange = (
 		e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -34,12 +39,17 @@ const OrderPage: React.FC = () => {
 	const handleSubmit = async (e: FormEvent) => {
 		e.preventDefault();
 		try {
-			await axios.post(process.env.NEXT_PUBLIC_ORDERS_API_URL!, {
+			const response = await axios.post(process.env.NEXT_PUBLIC_ORDERS_API_URL!, {
 				fullName: form.fullName,
 				address: form.address,
 				email: form.email,
 				products: selectedProducts,
 			});
+			if (demo) {
+				setPlacedOrder({ id: response.data.id, products: selectedProducts });
+				dispatch(clearProducts());
+				return;
+			}
 			alert("Order placed successfully!");
 			dispatch(clearProducts());
 			router.push("/");
@@ -58,6 +68,15 @@ const OrderPage: React.FC = () => {
 		category,
 		products,
 	}));
+
+	if (demo && placedOrder) {
+		return (
+			<demo.DemoOrderPlaced
+				order={placedOrder}
+				onDone={() => router.push("/")}
+			/>
+		);
+	}
 
 	return (
 		<div style={{ padding: "20px" }}>
@@ -79,6 +98,7 @@ const OrderPage: React.FC = () => {
 			)}
 			<hr />
 			<h2>Order Details</h2>
+			{demo && <demo.DemoCheckoutNote />}
 			<form onSubmit={handleSubmit}>
 				<div>
 					<label htmlFor="fullName">Full Name: </label>
