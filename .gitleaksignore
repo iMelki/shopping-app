@@ -1,0 +1,21 @@
+# Gitleaks fingerprints reviewed and accepted as false positives.
+# One line per finding, never a path or rule wildcard. Each was checked on
+# 2026-10-22: the value is a public placeholder, not a credential, so nothing
+# needs rotating. A new finding at another line or in another file still fails.
+#
+# orders-api/README.md line 5: the CircleCI badge URL copied from the NestJS
+# typescript-starter README. Its token is the starter's documented placeholder
+# (the same 12 characters appear in nestjs/typescript-starter's public README),
+# not a CircleCI token for this repository.
+#   Working-tree scan (gitleaks detect --no-git):
+orders-api/README.md:generic-api-key:5
+#   Git history scan (introduced in 60bae1a, "Initial commit"; already listed
+#   in .gitleaks-baseline.json, repeated here so the reason sits next to it):
+60bae1a51b084ae9b5427e596871319fef8eda62:orders-api/README.md:generic-api-key:5
+#
+# .gitleaks-baseline.json lines 9 and 10: the baseline's own "Match" and
+# "Secret" fields for the orders-api/README.md finding above (the same public
+# placeholder). CI passes --baseline-path, which already excludes this file;
+# these two lines keep a scan run without that flag from failing on it.
+.gitleaks-baseline.json:generic-api-key:9
+.gitleaks-baseline.json:generic-api-key:10
