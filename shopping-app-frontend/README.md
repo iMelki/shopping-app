@@ -34,3 +34,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Backend-free demo
+
+`npm run build:demo` builds a static demo into `out-demo/` that runs entirely
+in the browser: the categories and orders calls are answered by an in-browser
+axios adapter (`src/demo/adapter.ts`) from fictional fixtures
+(`src/demo/fixtures.ts`), and checkout ends on a "Demo order placed, nothing
+was charged" screen. No payment details are collected and nothing is sent
+over the network. Serve `out-demo/` with any static file server.
+
+Normal `npm run build` is unchanged: it swaps `@/demo/entry` for a null stub,
+so none of the demo code ships with it.
